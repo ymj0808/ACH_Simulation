@@ -1,6 +1,5 @@
 #include "caches/cluster_variants.h"
-#include "caches/gd_variants.h"
-#include "caches/lru_variants.h"
+#include "caches/lru_cache.h"
 #include "request.h"
 #include <chrono>
 #include <fstream>
