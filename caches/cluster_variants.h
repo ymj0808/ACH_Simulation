@@ -3,18 +3,15 @@
 
 #include "../consistent_hash/consistent_hash.h"
 #include "../double_queue_node/double_queue_node.h"
-//#include "../matrix.h"
 #include "cache.h"
 #include "cache_object.h"
-//#include "gd_variants.h"
 #include "lru_cache.h"
 #include <list>
 #include <random>
 #include <set>
 #include <unordered_map>
-//#include "../consistent_hash/node.h"
 #include <chrono>
-
+#include "CpuMonitor.cpp"
 
 /*
     this file defines cluster-based cache policy
@@ -150,4 +147,4 @@ public:
 
 static Factory<ShufflerM> factorySFM("ACH");
 
-#endif#pragma once
+#endif /*CLUSTER_VARIENTS_H*/
