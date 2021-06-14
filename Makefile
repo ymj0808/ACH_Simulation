@@ -5,7 +5,7 @@ OBJS += random_helper.o
 OBJS += consistent_hash/consistent_hash.o
 OBJS += consistent_hash/node.o
 OBJS += double_queue_node/double_queue_node.o
-OBJS += webcachesim.o
+OBJS += cache_sim.o
 LIBS += -lm
 
 CXX = g++ #clang++ #OSX
