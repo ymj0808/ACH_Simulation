@@ -11,6 +11,7 @@
 #include <set>
 #include <unordered_map>
 #include <chrono>
+#include <queue>
 #include "CpuMonitor.cpp"
 
 /*
@@ -145,6 +146,6 @@ public:
     void reset();
 };
 
-static Factory<ShufflerM> factorySFM("ACH");
+static Factory<ACHCache> factorySFM("ACH");
 
 #endif /*CLUSTER_VARIENTS_H*/
