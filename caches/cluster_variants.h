@@ -15,7 +15,6 @@
 //#include "../consistent_hash/node.h"
 #include <chrono>
 
-#include "CpuMonitor.cpp"
 
 /*
     this file defines cluster-based cache policy
