@@ -21,7 +21,7 @@ where
  - cacheSize: the cache capacity in bytes
  - cacheParams: optional cache parameters, can be used to tune cache policies (see below)
 
-### Request trace format (Change Attention)
+### Request trace format
 
 Request traces must be given in a space-separated format with **TWO** colums
 
