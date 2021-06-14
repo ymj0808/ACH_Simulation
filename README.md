@@ -1,5 +1,4 @@
-# cache simulatior:
-## A simulator for paper ACH.
+# cache simulatior for paper ACH
 
 ## Compiling 
 
@@ -13,7 +12,7 @@ The Makefile is offered
 
 The basic interface is
 
-    ./webcachesim traceFile cacheType cacheSize [cacheParams]
+    ./cache_sim traceFile cacheType cacheSize [cacheParams]
 
 where
 
@@ -49,7 +48,7 @@ There are currently ten caching policies. This section describes each one, in tu
 
 #### Example usage
 
-    ./webcachesim trace_file_path cache_policy [paramName=paramValue]
+    ./cache_sim trace_file_path cache_policy [paramName=paramValue]
 
 #### LRU
 
@@ -59,20 +58,20 @@ params: none
 
 example usage:
 
-    ./webcachesim test.tr LRU 1000
+    ./cache_sim test.tr LRU 1000
 
 or use real content size:
 
-    ./webcachesim test.tr LRU 1000 filesize=true     
+    ./cache_sim test.tr LRU 1000 filesize=true     
 
 ## Distributed cache policy
 
 #### Consistent hash
 **params**: `n` - the number of caches in cluster, `vnode` - the number of virtual nodes for each server 
 
-    ./webcachesim test.tr CH 1000 n=4 vnode=40
+    ./cache_sim test.tr CH 1000 n=4 vnode=40
 
 #### Shuffler Matrix
 **params**: `n` - the number of caches in cluster
 
-    ./webcachesim test.tr SFM 1000 n=4 vnode=40 alpha=5 W=10000 t=1000
+    ./cache_sim test.tr ACH 1000 n=4 vnode=40 alpha=5 W=10000 t=1000
