@@ -39,21 +39,6 @@ unsigned int MurMurHash(const void *key, int len) {
 }
 
 
-std::pair<unsigned int, unsigned int>
-consistent_hash::look_up_simple(const std::string &content) {
-  // return the ip of virtual node that serve this content
-  auto hash_position = SimpleHash(content.c_str(), HASH_LEN);
-  auto virtual_node_index = find_nearest_node_simple(hash_position);
-  virtual_node_index++;
-  if (virtual_node_index >= sorted_node_hash_list.size()) { // cross the zero
-    virtual_node_index = 0;
-  }
-  return std::pair<unsigned int, unsigned int>(
-      virtual_node_index,
-      virtual_node_map.find(sorted_node_hash_list[virtual_node_index])
-          ->second.cache_index);
-}
-
 unsigned int consistent_hash::find_nearest_node_simple(
     unsigned int
         hash_value) { // find the nearest virtual node for given hash position
