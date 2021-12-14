@@ -74,4 +74,4 @@ or use real content size:
 #### Adaptive Consistent hash
 **params**: `n` - the number of caches in cluster
 
-    ./cache_sim test.tr ACH 1000 n=4 vnode=40 alpha=5 W=10000 t=1000
+    ./cache_sim test.tr ACH 1000 n=4 vnode=40 alpha=0.5 W=10000 t=1000
